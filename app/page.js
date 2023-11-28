@@ -25,11 +25,15 @@ const Page = () => {
                                      taskName,
                                      isFinished
                                  }) => {
-        const res = await axios.post('http://localhost:3000/todos', {
-            taskName,
-            isFinished
-        })
-        return res.data
+        try{
+            const res = await axios.post('http://localhost:3000/todos', {
+                taskName,
+                isFinished
+            })
+            return res.data
+        }catch (error){
+            return error
+        }
     }
 
     //create new data with mutation

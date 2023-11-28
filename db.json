@@ -6,24 +6,14 @@
       "isFinished": false
     },
     {
-      "taskName": "test",
+      "taskName": "to bath",
       "isFinished": false,
       "id": 2
     },
     {
-      "taskName": "test",
+      "taskName": "new task",
       "isFinished": false,
       "id": 3
-    },
-    {
-      "taskName": "test",
-      "isFinished": false,
-      "id": 4
-    },
-    {
-      "taskName": "to sleep",
-      "isFinished": false,
-      "id": 5
     }
   ]
 }
