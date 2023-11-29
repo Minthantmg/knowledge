@@ -25,13 +25,13 @@ const Page = () => {
                                      taskName,
                                      isFinished
                                  }) => {
-        try{
+        try {
             const res = await axios.post('http://localhost:3000/todos', {
                 taskName,
                 isFinished
             })
             return res.data
-        }catch (error){
+        } catch (error) {
             return error
         }
     }
@@ -66,7 +66,9 @@ const Page = () => {
 
             {/*data will display when fetch is success*/}
             {isSuccess && todos.map(todo => {
-                return <li key={todo.id}>{todo.id} - {todo.taskName}</li>
+                return <li key={todo.id}>
+                    <a href={`/${todo.id}`}>{todo.id} - {todo.taskName}</a>
+                </li>
             })}
         </div>
     );
