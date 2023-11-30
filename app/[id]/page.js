@@ -5,7 +5,7 @@ import {useQuery} from "@tanstack/react-query";
 import axios from "axios";
 
 const getTodoById = async (id) =>{
-    const res = await axios.get(`http://localhost:4000/${id}`)
+    const res = await axios.get(`http://localhost:3000/todos/${id}`)
     return res.data
 }
 const TodoById = () => {
@@ -16,6 +16,8 @@ const TodoById = () => {
         queryFn: () =>getTodoById(id),
         enabled :!!id,//similar to id ? true : false
     })
+
+    console.log(todo)
 
 
     return (
