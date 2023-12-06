@@ -3,6 +3,7 @@ import React from 'react';
 import {useParams} from "next/navigation";
 import {useQuery} from "@tanstack/react-query";
 import axios from "axios";
+import Reducer from "@/app/reducer";
 
 const getTodoById = async (id) =>{
     const res = await axios.get(`http://localhost:3000/todos/${id}`)
@@ -28,5 +29,4 @@ const TodoById = () => {
         </div>
     );
 };
-
 export default TodoById;
